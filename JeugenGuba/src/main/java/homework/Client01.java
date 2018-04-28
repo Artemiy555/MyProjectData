@@ -44,7 +44,7 @@ public class Client01 {
                 do {
                     try {
                         System.out.print("Client01 : ");
-                        message = scan.nextLine();
+                        message = "Client01"+scan.nextLine();
                         buffer.put(message.getBytes());
                         buffer.flip();
                         channel.write(buffer);

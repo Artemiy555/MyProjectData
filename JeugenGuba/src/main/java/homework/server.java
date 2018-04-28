@@ -20,8 +20,7 @@ public class server {public static void main(String[] args) throws IOException {
     System.out.println("Ожидаем подключения...");
     ExecutorService clients = Executors.newFixedThreadPool(20);
 
-    ScheduledExecutorService clientListener =
-            Executors.newSingleThreadScheduledExecutor();
+    ScheduledExecutorService clientListener = Executors.newSingleThreadScheduledExecutor();
     clientListener.scheduleAtFixedRate(() -> {
         try {
             SocketChannel client = sc.accept();
@@ -31,12 +30,10 @@ public class server {public static void main(String[] args) throws IOException {
                     int bytes;
                     while ((bytes = client.read(buffer)) > 0) {
                         buffer.flip();
-                        System.out.println("Входящее сообщение: "
-                                + new String(buffer.array(), 0, bytes));
+                        System.out.println("Входящее сообщение: " + new String(buffer.array(), 0, bytes));
                         buffer.clear();
                     }
                     do {
-                        System.out.print("Сообщение для отправки : ");
                         buffer.flip();
                         client.write(buffer);
                         buffer.clear();
