@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="hibernate.lesson11.practic.Sim" table="SimCards">
+        <!-- Ключевое поле ID-->
+        <id name="id" type="java.lang.Long">
+            <column name="Sim_ID"/>
+            <generator class="increment"/>
+        </id>
+        <!-- Поля класса -->
+        <property name="carier" type="java.lang.String">
+            <column name="CARIER"/>
+        </property>
+        <property name="tariff" type="java.lang.String">
+            <column name="TARIFF"/>
+        </property>
+    </class>
+</hibernate-mapping>
