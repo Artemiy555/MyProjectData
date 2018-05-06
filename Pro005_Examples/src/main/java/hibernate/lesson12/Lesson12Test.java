@@ -6,6 +6,7 @@ import hibernate.lesson12.util.HibernateUtil;
 import org.hibernate.Session;
 
 import java.util.Calendar;
+import java.util.List;
 
 public class Lesson12Test {
 
@@ -27,6 +28,15 @@ public class Lesson12Test {
         session.save(order2);
         session.save(order3);
         session.getTransaction().commit();
+
+        List<Order> orders =
+                HibernateUtil.getFactory().openSession()
+                        .createCriteria(Order.class)
+                        .list();
+
+        for (Order order : orders) {
+            System.out.println(order);
+        }
 
         HibernateUtil.getFactory().close();
     }
