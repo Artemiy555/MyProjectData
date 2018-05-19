@@ -17,6 +17,9 @@ public class Author {
     @Column
     private String surname;
 
+    @OneToOne(fetch = FetchType.EAGER, mappedBy = "author")
+    private Book book;
+
     public Author() {}
     public Author(String name, String surname) {
         this.name = name;
@@ -40,6 +43,12 @@ public class Author {
     }
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+    public Book getBook() {
+        return book;
+    }
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     @Override
