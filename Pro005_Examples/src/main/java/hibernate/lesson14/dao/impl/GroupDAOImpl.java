@@ -27,6 +27,8 @@ public class GroupDAOImpl implements GroupDAO {
             return id;
         } catch (HibernateException exc) {
             return null;
+        } finally {
+            session.close();
         }
     }
 
