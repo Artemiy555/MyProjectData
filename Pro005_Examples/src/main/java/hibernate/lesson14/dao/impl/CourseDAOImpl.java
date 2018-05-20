@@ -27,22 +27,47 @@ public class CourseDAOImpl implements CourseDAO {
             return id;
         } catch (HibernateException exc) {
             return null;
+        } finally {
+            session.close();
         }
     }
 
     @Override
     public Course read(Long id) {
-        return null;
+        Session session = factory.openSession();
+        Course course = session.get(Course.class, id);
+        session.close();
+        return course;
     }
 
     @Override
     public boolean update(Course course) {
-        return false;
+        Session session = factory.openSession();
+        try {
+            session.beginTransaction();
+            session.update(course);
+            session.getTransaction().commit();
+            return true;
+        } catch (HibernateException exc) {
+            return false;
+        } finally {
+            session.close();
+        }
     }
 
     @Override
-    public boolean delete(Long id) {
-        return false;
+    public boolean delete(Course course) {
+        Session session = factory.openSession();
+        try {
+            session.beginTransaction();
+            session.delete(course);
+            session.getTransaction().commit();
+            return true;
+        } catch (HibernateException exc) {
+            return false;
+        } finally {
+            session.close();
+        }
     }
 
     @Override

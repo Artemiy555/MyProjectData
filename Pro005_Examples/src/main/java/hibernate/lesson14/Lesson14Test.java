@@ -4,7 +4,7 @@ import hibernate.lesson14.entity.Course;
 import hibernate.lesson14.entity.Group;
 import hibernate.lesson14.service.CourseService;
 import hibernate.lesson14.service.impl.CourseServiceImpl;
-import hibernate.lesson14.service.impl.GroupService;
+import hibernate.lesson14.service.GroupService;
 import hibernate.lesson14.service.impl.GroupServiceImpl;
 import hibernate.lesson14.util.HibernateUtil;
 
@@ -31,6 +31,12 @@ public class Lesson14Test {
                 .create(course1, "Group 2 - CRS 2",
                         Calendar.getInstance().getTime(),
                         Calendar.getInstance().getTime());
+
+        course1.getGroups().add(group1);
+        course1.getGroups().add(group2);
+        courseService.update(course1);
+
+        courseService.delete(course1);
 
         HibernateUtil.getFactory().close();
     }
