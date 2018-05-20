@@ -6,4 +6,6 @@ public interface CourseService {
 
     Course create(String title, String description);
 
+    boolean delete(Course course);
+
 }
