@@ -1,4 +1,4 @@
-package hibernate.lesson14.service.impl;
+package hibernate.lesson14.service;
 
 import hibernate.lesson14.entity.Course;
 import hibernate.lesson14.entity.Group;

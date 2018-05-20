@@ -4,6 +4,7 @@ import hibernate.lesson14.dao.GroupDAO;
 import hibernate.lesson14.dao.impl.GroupDAOImpl;
 import hibernate.lesson14.entity.Course;
 import hibernate.lesson14.entity.Group;
+import hibernate.lesson14.service.GroupService;
 
 import java.util.Date;
 

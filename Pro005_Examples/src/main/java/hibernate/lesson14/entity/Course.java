@@ -32,7 +32,7 @@ public class Course implements Serializable {
     @OneToMany(
             fetch = FetchType.EAGER,
             mappedBy = "courseId",
-            cascade = CascadeType.REMOVE,
+            cascade = { CascadeType.REMOVE },
             targetEntity = Group.class
     )
     private List<Group> groups = new ArrayList<>();
@@ -68,13 +68,6 @@ public class Course implements Serializable {
         this.groups = groups;
     }
 
-    @Override
-    public String toString() {
-        return "Course{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", groups=" + groups +
-                '}';
-    }
+
+
 }
