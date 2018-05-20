@@ -9,6 +9,7 @@
         <module name="AlexandrKorniychuk" />
         <module name="AlexChavarria" />
         <module name="Anna_Khizhnyak" />
+        <module name="BaranetsArtemiy" />
         <module name="DanilBabenko" />
         <module name="Hai_Le" />
         <module name="JeugenGuba" />
@@ -26,6 +27,7 @@
       <module name="AlexandrKorniychuk" target="1.8" />
       <module name="AlexChavarria" target="1.8" />
       <module name="Anna_Khizhnyak" target="1.8" />
+      <module name="BaranetsArtemiy" target="1.8" />
       <module name="DanilBabenko" target="1.8" />
       <module name="Hai_Le" target="1.8" />
       <module name="JeugenGuba" target="1.8" />

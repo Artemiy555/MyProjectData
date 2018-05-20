@@ -13,7 +13,7 @@ public class JDBCConectionUtil {
 
             Locale.setDefault(Locale.ENGLISH);
 
-            String url = "jdbc:mysql://localhost:3306/";
+            String url = "jdbc:mysql://localhost:3306?useSSL=false";
 
             String user ="root";
             String pass ="root";
