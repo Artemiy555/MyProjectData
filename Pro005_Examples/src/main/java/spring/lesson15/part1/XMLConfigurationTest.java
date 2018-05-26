@@ -1,9 +1,8 @@
-package spring.lesson15;
+package spring.lesson15.part1;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import spring.lesson15.entity.Human;
-import spring.lesson15.entity.Weapon;
+import spring.lesson15.part1.entity.Human;
 
 public class XMLConfigurationTest {
 
@@ -18,9 +17,6 @@ public class XMLConfigurationTest {
         Human human1 = context.getBean("Vasya", Human.class);
         System.out.println(human1);
 
-        Weapon axe = context.getBean("Axe", Weapon.class);
-        System.out.println(axe);
-        Weapon knife = context.getBean("LegendaryOfficeKnife", Weapon.class);
-        System.out.println(knife);
+
     }
 }

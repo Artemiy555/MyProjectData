@@ -1,4 +1,4 @@
-package spring.lesson15.entity;
+package spring.lesson15.part1.entity;
 
 public class Weapon {
 
