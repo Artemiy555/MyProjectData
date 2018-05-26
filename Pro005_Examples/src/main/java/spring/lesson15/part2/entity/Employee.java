@@ -1,5 +1,8 @@
 package spring.lesson15.part2.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Employee {
 
     private String name;
@@ -7,6 +10,10 @@ public class Employee {
     private String position;
 
     private Double salary;
+
+    @Autowired
+    @Qualifier("Ferrari")
+    private Car car;
 
     public Employee(String name, String position, Double salary) {
         this.name = name;
@@ -32,6 +39,12 @@ public class Employee {
     public void setSalary(Double salary) {
         this.salary = salary;
     }
+    public Car getCar() {
+        return car;
+    }
+    public void setCar(Car car) {
+        this.car = car;
+    }
 
     @Override
     public String toString() {
@@ -39,6 +52,7 @@ public class Employee {
                 "name='" + name + '\'' +
                 ", position='" + position + '\'' +
                 ", salary=" + salary +
+                ", car=" + car +
                 '}';
     }
 }
