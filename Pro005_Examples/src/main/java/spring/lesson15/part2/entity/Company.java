@@ -1,11 +1,14 @@
 package spring.lesson15.part2.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 public class Company {
 
     private String title;
 
+    @Autowired
     private List<Employee> employees;
 
     public Company(String title) {

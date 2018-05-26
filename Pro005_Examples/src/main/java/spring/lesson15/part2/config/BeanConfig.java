@@ -7,10 +7,13 @@ import org.springframework.context.annotation.Description;
 import spring.lesson15.part2.entity.Company;
 import spring.lesson15.part2.entity.Employee;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Configuration
 public class BeanConfig {
 
-    @Bean
+    @Bean(name = "Ivan")
     @Description("Иван (менджер среднего звена)")
     public Employee beanIvan() {
         return new Employee(
@@ -20,7 +23,7 @@ public class BeanConfig {
         );
     }
 
-    @Bean
+    @Bean(name = "Victor")
     @Description("Виктор (водитель)")
     public Employee beanViсtor() {
         return new Employee(
@@ -28,6 +31,14 @@ public class BeanConfig {
                 "Driver",
                 75.00
         );
+    }
+
+    @Bean
+    public List<Employee> employees() {
+        List<Employee> employees = new ArrayList<>();
+        employees.add(beanIvan());
+        employees.add(beanViсtor());
+        return employees;
     }
 
     @Bean
