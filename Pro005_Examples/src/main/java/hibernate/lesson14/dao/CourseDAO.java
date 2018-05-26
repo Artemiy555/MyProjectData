@@ -12,7 +12,7 @@ public interface CourseDAO {
 
     boolean update(Course course);
 
-    boolean delete(Long id);
+    boolean delete(Course course);
 
     List<Course> findAll();
 }
