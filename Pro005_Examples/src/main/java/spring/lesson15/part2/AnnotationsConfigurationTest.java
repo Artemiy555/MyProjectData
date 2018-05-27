@@ -18,5 +18,7 @@ public class AnnotationsConfigurationTest {
 
         Employee employee = context.getBean("Ivan", Employee.class);
         System.out.println(employee);
+        Employee employee1 = context.getBean("Victor", Employee.class);
+        System.out.println(employee1);
     }
 }

@@ -4,6 +4,7 @@ package spring.lesson15.part2.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
+import spring.lesson15.part2.entity.Car;
 import spring.lesson15.part2.entity.Company;
 import spring.lesson15.part2.entity.Employee;
 
@@ -31,6 +32,16 @@ public class BeanConfig {
                 "Driver",
                 75.00
         );
+    }
+
+    @Bean(name = "Maybach")
+    public Car beanMaybach() {
+        return new Car("Maybach", 2018);
+    }
+
+    @Bean(name = "Ferrari")
+    public Car beanFerrari() {
+        return new Car("Ferrari", 2018);
     }
 
     @Bean
