@@ -22,6 +22,13 @@
         pom.xml (имя файла константно)
 
         -->
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.13.RELEASE</version>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <!-- GroupId - добавляет уникальный идентефекатор
          для группы проекта-->
@@ -51,6 +58,7 @@
         <module>VladimirTereshchenko</module>
         <module>DanilBabenko</module>
         <module>Peter_Zora</module>
+        <module>Pro005_Examples_WEB</module>
     </modules>
 
     <properties>
