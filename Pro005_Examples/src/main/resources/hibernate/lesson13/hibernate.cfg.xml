@@ -15,6 +15,7 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
 
         <mapping class="hibernate.lesson13.entity.Author"/>
+        <mapping class="hibernate.lesson13.entity.Book"/>
 
     </session-factory>
 </hibernate-configuration>

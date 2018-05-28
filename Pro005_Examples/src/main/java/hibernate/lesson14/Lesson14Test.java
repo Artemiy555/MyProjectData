@@ -28,7 +28,7 @@ public class Lesson14Test {
                         Calendar.getInstance().getTime());
 
         Group group2 = groupService
-                .create(course1, "Group 2 - CRS 2",
+                .create(course1, "Group 2 - CRS 1",
                         Calendar.getInstance().getTime(),
                         Calendar.getInstance().getTime());
 

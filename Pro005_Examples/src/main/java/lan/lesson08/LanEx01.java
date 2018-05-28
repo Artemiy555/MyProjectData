@@ -57,6 +57,7 @@ public class LanEx01 {
             buffer.flip();
             String inputText = new String(buffer.array(), 0, bts);
             System.out.println("Сообщение от клиента: " + inputText);
+            buffer.clear();
         }
         System.out.println("Останавливаем сервер");
     }

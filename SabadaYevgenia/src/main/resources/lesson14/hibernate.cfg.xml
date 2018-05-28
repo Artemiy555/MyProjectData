@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">
+            jdbc:mysql://localhost:3306/hibernate
+        </property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+
+        <property name="hibernate.show_sql">true</property>
+
+        <!--  3 основных режима работы  hibernate-->
+        <!--
+        1.creat -позволяет создать базу данных и добавлять в нее данные.
+                      про каждом перезапуске проэкта БД генерируется по новому
+
+        2.creat-drop - создает БД и удаляет БД при завершении работы программы
+
+        3.update  - режим обновления БД-->
+
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <mapping class="hibernate.lesson14.entity.Course"/>
+        <mapping class="hibernate.lesson14.entity.Croup"/>
+    </session-factory>
+</hibernate-configuration>
