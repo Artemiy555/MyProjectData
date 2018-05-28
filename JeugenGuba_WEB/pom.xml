@@ -7,9 +7,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>Pro005</groupId>
-        <artifactId>Pro005</artifactId>
-        <version>1.0.0</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.13.RELEASE</version>
     </parent>
 
     <artifactId>JeugenGuba_WEB</artifactId>

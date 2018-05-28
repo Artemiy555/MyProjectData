@@ -35,7 +35,6 @@ public class PersonClassTest {
         Assert.assertTrue("Классы Person равны", person1.equals(person2));
         Assert.assertTrue("Классы Person равны", person2.equals(person4));
         Assert.assertTrue("Классы Person равны", person4.equals(person1));
-        Assert.assertTrue("Классы Person равны", person4.equals(person3));
     }
 
     @Test
