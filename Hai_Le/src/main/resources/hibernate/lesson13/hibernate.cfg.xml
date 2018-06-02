@@ -12,15 +12,12 @@
         <property name="connection.username">root</property>
         <property name="connection.password">root</property>
         <property name="hibernate.show_sql">true</property>
-
-        <!-- 3 основных режиа работы Hibernate-->
-        <!-- create - позволяет создать базу данных и добавлять в нее данные.
-                      про каждом перезапуске проэкта БД генерируется по новому
-             create-drop - создает БД и удаляет БД при завершении работы программы
-             update      - режим обновления БД -->
         <property name="hibernate.hbm2ddl.auto">create</property>
 
-        <mapping resource="hibernate/lesson11/entity/Employee.hbm.xml"/>
+        <!-- Ниже маппинг на примере класса Author -->
+        <mapping class="hibernate.lesson13.entity.Author"/>
+        <mapping class="hibernate.lesson13.entity.Book" />
+
 
     </session-factory>
 </hibernate-configuration>
