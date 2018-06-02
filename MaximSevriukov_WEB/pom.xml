@@ -12,7 +12,7 @@
         <version>1.5.13.RELEASE</version>
     </parent>
 
-    <artifactId>Hai_Le_WEB</artifactId>
+    <artifactId>MaximSevriukov_WEB</artifactId>
 
     <packaging>jar</packaging>
 
