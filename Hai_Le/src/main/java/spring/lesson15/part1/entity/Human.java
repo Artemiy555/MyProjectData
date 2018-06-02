@@ -16,21 +16,11 @@ public class Human {
         this.hp = hp;
     }
 
-    public String getName() {
-        return name;
-    }
-    public Integer getAge() {
-        return age;
-    }
-    public Integer getHp() {
-        return hp;
-    }
-    public Weapon getWeapon() {
-        return weapon;
-    }
-    public void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
-    }
+    public String getName() { return name; }
+    public Integer getAge() { return age; }
+    public Integer getHp() { return hp; }
+    public Weapon getWeapon() { return weapon; }
+    public void setWeapon(Weapon weapon) { this.weapon = weapon; }
 
     @Override
     public String toString() {
