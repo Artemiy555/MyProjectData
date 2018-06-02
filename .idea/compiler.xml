@@ -11,9 +11,11 @@
         <module name="AlexChavarria" />
         <module name="AlexChWeb" />
         <module name="Anna_Khizhnyak" />
+        <module name="AnnaKhizhnyak_WEB" />
         <module name="Danil_Babenko_WEB" />
         <module name="DanilBabenko" />
         <module name="Hai_Le" />
+        <module name="Hai_Le_WEB" />
         <module name="JeugenGuba" />
         <module name="JeugenGuba_WEB" />
         <module name="MaximSevriukov" />
@@ -30,12 +32,6 @@
         <module name="VladimirTereshchenko" />
         <module name="VladimirTereshchenko_WEB" />
       </profile>
-      <profile name="Annotation profile for Pro005" enabled="true">
-        <sourceOutputDir name="../JeugenGuba_WEB/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../JeugenGuba_WEB/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="Hai_Le_WEB" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AlexandrKorniychuk" target="1.8" />
@@ -43,6 +39,7 @@
       <module name="AlexChavarria" target="1.8" />
       <module name="AlexChWeb" target="1.8" />
       <module name="Anna_Khizhnyak" target="1.8" />
+      <module name="AnnaKhizhnyak_WEB" target="1.6" />
       <module name="Danil_Babenko_WEB" target="1.6" />
       <module name="DanilBabenko" target="1.8" />
       <module name="Hai_Le" target="1.8" />
