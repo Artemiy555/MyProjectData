@@ -16,6 +16,8 @@
 
     <packaging>jar</packaging>
 
+    <!-- Добавление зависимостей -->
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
