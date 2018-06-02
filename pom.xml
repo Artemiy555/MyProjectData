@@ -46,15 +46,12 @@
         <module>JeugenGuba</module>
         <module>MaximSevriukov</module>
         <module>MickleMur</module>
-
         <module>SvetlanaKunderevich</module>
         <module>TelechukPeter</module>
         <module>VladimirTereshchenko</module>
         <module>DanilBabenko</module>
         <module>Peter_Zora</module>
 
-
-        <module>Hai_Le_WEB</module>
         <module>Pro005_Examples_WEB</module>
         <module>Danil_Babenko_WEB</module>
         <module>JeugenGuba_WEB</module>
@@ -66,6 +63,7 @@
         <module>AlexandrKorniychuk_WEB</module>
         <module>Hai_Le_WEB</module>
         <module>AnnaKhizhnyak_WEB</module>
+        <module>MaximSevriukov_WEB</module>
     </modules>
 
     <properties>
