@@ -25,7 +25,6 @@ public class Human {
     public Integer getHp() {
         return hp;
     }
-
     public Weapon getWeapon() {
         return weapon;
     }

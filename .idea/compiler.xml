@@ -7,41 +7,62 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AlexandrKorniychuk" />
+        <module name="AlexandrKorniychuk_WEB" />
         <module name="AlexChavarria" />
+        <module name="AlexChWeb" />
         <module name="Anna_Khizhnyak" />
-        <module name="Baranets_Artemiy_WEB" />
-        <module name="BaranetsArtemiy" />
+        <module name="Danil_Babenko_WEB" />
         <module name="DanilBabenko" />
         <module name="Hai_Le" />
         <module name="JeugenGuba" />
+        <module name="JeugenGuba_WEB" />
         <module name="MaximSevriukov" />
         <module name="MickleMur" />
+        <module name="MMA_WEB" />
         <module name="Peter_Zora" />
+        <module name="Peter_Zora_Web" />
         <module name="Pro005_Examples" />
+        <module name="Pro005_Examples_WEB" />
+        <module name="Sabada_Yevgenya_WEB" />
         <module name="SabadaYevgenia" />
         <module name="SvetlanaKunderevich" />
         <module name="TelechukPeter" />
         <module name="VladimirTereshchenko" />
+        <module name="VladimirTereshchenko_WEB" />
+      </profile>
+      <profile name="Annotation profile for Pro005" enabled="true">
+        <sourceOutputDir name="../JeugenGuba_WEB/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../JeugenGuba_WEB/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Hai_Le_WEB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AlexandrKorniychuk" target="1.8" />
+      <module name="AlexandrKorniychuk_WEB" target="1.6" />
       <module name="AlexChavarria" target="1.8" />
+      <module name="AlexChWeb" target="1.8" />
       <module name="Anna_Khizhnyak" target="1.8" />
-      <module name="Baranets_Artemiy_WEB" target="1.8" />
-      <module name="BaranetsArtemiy" target="1.8" />
+      <module name="Danil_Babenko_WEB" target="1.6" />
       <module name="DanilBabenko" target="1.8" />
       <module name="Hai_Le" target="1.8" />
+      <module name="Hai_Le_WEB" target="1.6" />
       <module name="JeugenGuba" target="1.8" />
+      <module name="JeugenGuba_WEB" target="1.6" />
       <module name="MaximSevriukov" target="1.8" />
       <module name="MickleMur" target="1.8" />
+      <module name="MMA_WEB" target="1.6" />
       <module name="Peter_Zora" target="1.8" />
+      <module name="Peter_Zora_Web" target="1.6" />
       <module name="Pro005" target="1.8" />
       <module name="Pro005_Examples" target="1.8" />
+      <module name="Pro005_Examples_WEB" target="1.6" />
+      <module name="Sabada_Yevgenya_WEB" target="1.6" />
       <module name="SabadaYevgenia" target="1.8" />
       <module name="SvetlanaKunderevich" target="1.8" />
       <module name="TelechukPeter" target="1.8" />
       <module name="VladimirTereshchenko" target="1.8" />
+      <module name="VladimirTereshchenko_WEB" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
