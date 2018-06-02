@@ -15,6 +15,7 @@
         <module name="Danil_Babenko_WEB" />
         <module name="DanilBabenko" />
         <module name="Hai_Le" />
+        <module name="Hai_Le_WEB" />
         <module name="JeugenGuba" />
         <module name="JeugenGuba_WEB" />
         <module name="JeugenGuba_WEB (1)" />
@@ -30,12 +31,6 @@
         <module name="TelechukPeter" />
         <module name="VladimirTereshchenko" />
         <module name="VladimirTereshchenko_WEB" />
-      </profile>
-      <profile name="Annotation profile for Pro005" enabled="true">
-        <sourceOutputDir name="../JeugenGuba_WEB/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../JeugenGuba_WEB/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="Hai_Le_WEB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
