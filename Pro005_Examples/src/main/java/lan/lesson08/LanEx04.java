@@ -9,9 +9,7 @@ import java.util.Scanner;
 public class LanEx04 {
 
     public static void main(String[] args) throws IOException {
-        SocketChannel channel =
-                SocketChannel.open(
-                        new InetSocketAddress("127.0.0.1", 20000));
+        SocketChannel channel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 20000));
 
         ByteBuffer buffer = ByteBuffer.allocate(128);
         String message;

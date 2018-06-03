@@ -5,36 +5,43 @@ import hibernate.lesson11.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Lesson11Test {
-
-    public static void main(String[] args) {
+    public static Employee createEmp() throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("1st");
         Employee employee1 = new Employee(
-                "Igor",
-                "Ivanov",
-                45,
-                "Cleaner",
-                1000.00
+                reader.readLine(), //name
+                reader.readLine(), // surname
+                new Integer(reader.readLine()), //age
+                reader.readLine(), //position
+                new Double(reader.readLine()) //salary
         );
+            return employee1;
+    }
 
-        Employee employee2 = new Employee(
-                "Valentin",
-                "Ivanov",
-                55,
-                "Director",
-                1500.00
-        );
 
-        Session session =
-                HibernateUtil.getFactory().openSession();
+
+
+    public static void main(String[] args) throws Exception {
+       Employee employee = createEmp();
+
+
+        Session session = HibernateUtil.getFactory().openSession();
         try {
             session.beginTransaction();
-            session.save(employee1);
-            session.save(employee2);
+            session.save(employee);
             session.getTransaction().commit();
         } catch (HibernateException exc) {
             session.getTransaction().rollback();
         }
 
         HibernateUtil.getFactory().close();
+
     }
-}
+
+
+    }
+

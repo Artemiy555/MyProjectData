@@ -10,7 +10,7 @@
             jdbc:mysql://localhost:3306/hibernate_pro005
         </property>
         <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
+        <property name="connection.password">1111</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">create</property>
 

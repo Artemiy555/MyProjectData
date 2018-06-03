@@ -18,6 +18,7 @@
         <module name="Hai_Le_WEB" />
         <module name="JeugenGuba" />
         <module name="JeugenGuba_WEB" />
+        <module name="JeugenGuba_WEB (1)" />
         <module name="MaximSevriukov" />
         <module name="MickleMur" />
         <module name="MMA_WEB" />
@@ -26,7 +27,6 @@
         <module name="Pro005_Examples" />
         <module name="Pro005_Examples_WEB" />
         <module name="Sabada_Yevgenya_WEB" />
-        <module name="SabadaYevgenia" />
         <module name="SvetlanaKunderevich" />
         <module name="TelechukPeter" />
         <module name="VladimirTereshchenko" />
@@ -46,6 +46,7 @@
       <module name="Hai_Le_WEB" target="1.6" />
       <module name="JeugenGuba" target="1.8" />
       <module name="JeugenGuba_WEB" target="1.6" />
+      <module name="JeugenGuba_WEB (1)" target="1.6" />
       <module name="MaximSevriukov" target="1.8" />
       <module name="MickleMur" target="1.8" />
       <module name="MMA_WEB" target="1.6" />
