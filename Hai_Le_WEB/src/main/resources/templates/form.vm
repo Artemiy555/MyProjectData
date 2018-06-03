@@ -10,7 +10,7 @@
         </script>
     </head>
     <body>
-        <h1>Form Page</h1>
+        <h1>Form Page with JS</h1>
 
         <form>
             <p>Name</p>
