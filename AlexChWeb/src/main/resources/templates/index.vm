@@ -1,9 +1,10 @@
 <html>
-<head>
+## заголовок страницы
+    <head>
     <title>AlexChWeb</title>
-</head>
+    </head>
 
-<body>
-<h1>WEB TEST!</h1>
-</body>
+    <body>
+        <h1>WEB TEST!</h1>
+    </body>
 </html>
