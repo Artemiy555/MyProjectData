@@ -1,38 +1,44 @@
 package hibernate.lesson14.dao.impl;
-import hibernate.lesson14.dao.CourseDAO;
+
+
+import hibernate.lesson13.util.HibernateUtil;
+import hibernate.lesson14.dao.CourseDoa;
 import hibernate.lesson14.entity.Course;
-import hibernate.lesson14.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import javax.persistence.SequenceGenerator;
 import java.util.List;
 
-public class CourseDAOImpl implements CourseDAO {
+public class CourseDaoImpl implements CourseDoa {
 
     private SessionFactory factory;
 
-    public CourseDAOImpl() {
-        factory = HibernateUtil.getFactory();
-    }
+//    public CourseDaoImpl(SessionFactory factory) {
+//        this.factory = factory;
+//    }
+
+    public CourseDaoImpl() { factory = HibernateUtil.getFactory();}
 
     @Override
     public Long create(Course course) {
-        Session session = factory.openSession();
-        try {
+        Session session=factory.openSession();
+        try{
             session.beginTransaction();
-            Long id = (Long) session.save(course);
+            Long id=(Long)session.save(course);
             session.getTransaction().commit();
             return id;
-        } catch (HibernateException e) {
+        }catch (HibernateException exc){
             return null;
         }
-
     }
 
     @Override
     public Course read(Long id) {
-        return null;
+        return factory
+                .openSession()
+                .get(Course.class,id);
     }
 
     @Override
@@ -42,6 +48,13 @@ public class CourseDAOImpl implements CourseDAO {
 
     @Override
     public boolean delete(Long id) {
+        Session session = factory.openSession();
+        try {
+            session.beginTransaction();
+            session.delete(read(id));
+            session.getTransaction().commit();
+        } catch (HibernateException exc) {
+        }
         return false;
     }
 
