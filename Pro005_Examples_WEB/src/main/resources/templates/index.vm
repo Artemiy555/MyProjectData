@@ -47,6 +47,7 @@
         <footer>
             #* Гипер ссылка на другой компонент*#
             <a href="/form"> Form Page Example</a>
+            <a href="/backForm"> Backend Form Page Example</a>
         </footer>
     </body>
 </html>
