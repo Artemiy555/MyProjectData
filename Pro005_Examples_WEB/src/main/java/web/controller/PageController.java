@@ -29,4 +29,9 @@ public class PageController {
         return "form";
     }
 
+    @RequestMapping(value = "/backForm", method = RequestMethod.GET)
+    public String backendFormPage() {
+        return "backend_form";
+    }
+
 }
