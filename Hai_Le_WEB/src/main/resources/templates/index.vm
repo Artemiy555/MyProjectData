@@ -1,9 +1,55 @@
 <html>
+    #* Заголовок страницы *#
     <head>
         <title>Hai_Le_WEB</title>
+        <meta http-equiv="content-type" content="charset=utf-8"  charset="utf-8">
     </head>
 
+    #* Тело документа *#
     <body>
-        <h1>WEB TEST!</h1>
+
+    #* Заголовки *#
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h6>...6</h6>
+
+    #*  *#
+    <span> TEXT SPAN </span>
+    <p> Paragraph 1 </p>
+    <p> Paragraph 2 </p>
+    <p> Paragraph 3 </p>
+
+
+    #* Блоки *#
+    <div>
+        <div>
+             #* Добавляет рамки вокруг блока *#
+            <fieldset>
+                <legend>Functional block 1</legend>
+                <p>Field 1</p>
+                <input id="textField1" type="text"></input>
+                <p>Field 2</p>
+                <input id="textField2" type="text"></input>
+            </fieldset>
+        </div>
+    </div>
+    <div>
+        <div>
+            <fieldset>
+                <legend>Functional block 2</legend>
+                <input id="button1" type="button" value="button1">
+                <input id="button2" type="button" value="button2">
+                <input id="button2" type="button" value="button3">
+            </fieldset>
+        </div>
+    </div>
+
+
+
+    #* Footer - документа *#
+    <footer>
+        <a href="/form"> Form Page Example </a>
+    </footer>
+
     </body>
 </html>
