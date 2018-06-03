@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+        PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="homeWork.entity.NBook" table="NOTEBOOKS">
+        <!-- Ключевое поле ID-->
+        <id name="id" type="java.lang.Long">
+            <column name="NOTEBOOK_ID"/>
+            <generator class="increment"/>
+        </id>
+        <!-- Поля класса -->
+        <property name="serial" type="java.lang.Integer">
+            <column name="SERIAL"/>
+        </property>
+        <property name="vendor" type="java.lang.String">
+            <column name="VENDOR"/>
+        </property>
+        <property name="model" type="java.lang.String">
+            <column name="MODEL"/>
+        </property>
+        <property name="manufDate" type="java.lang.Long">
+            <column name="MANUFACTURE_DATE"/>
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="PRICE"/>
+        </property>
+    </class>
+</hibernate-mapping>

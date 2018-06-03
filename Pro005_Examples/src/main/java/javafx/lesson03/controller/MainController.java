@@ -27,8 +27,7 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        contacts = FXCollections
-                .observableArrayList(ContactsModel.open());
+        contacts = FXCollections.observableArrayList(ContactsModel.open());
         lstContacts.setItems(contacts);
     }
 
@@ -36,10 +35,7 @@ public class MainController {
     private void addDialogOnClick() throws IOException {
         Stage dlgNewContact = new Stage();
 
-        GridPane dlgView =
-                FXMLLoader.load(
-                        getClass().getResource("/javafx/lesson03/view/modal/dialog.fxml")
-                );
+        GridPane dlgView = FXMLLoader.load(getClass().getResource("/javafx/lesson03/view/modal/dialog.fxml"));
         dlgNewContact.setTitle("New Contact - Dialog");
         dlgNewContact.setResizable(false);
 
