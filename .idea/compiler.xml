@@ -20,6 +20,7 @@
         <module name="JeugenGuba_WEB" />
         <module name="JeugenGuba_WEB (1)" />
         <module name="MaximSevriukov" />
+        <module name="MaximSevriukov_WEB" />
         <module name="MickleMur" />
         <module name="MMA_WEB" />
         <module name="Peter_Zora" />
@@ -37,7 +38,7 @@
       <module name="AlexandrKorniychuk" target="1.8" />
       <module name="AlexandrKorniychuk_WEB" target="1.6" />
       <module name="AlexChavarria" target="1.8" />
-      <module name="AlexChWeb" target="1.8" />
+      <module name="AlexChWeb" target="1.6" />
       <module name="Anna_Khizhnyak" target="1.8" />
       <module name="AnnaKhizhnyak_WEB" target="1.6" />
       <module name="Danil_Babenko_WEB" target="1.6" />
@@ -48,6 +49,7 @@
       <module name="JeugenGuba_WEB" target="1.6" />
       <module name="JeugenGuba_WEB (1)" target="1.6" />
       <module name="MaximSevriukov" target="1.8" />
+      <module name="MaximSevriukov_WEB" target="1.6" />
       <module name="MickleMur" target="1.8" />
       <module name="MMA_WEB" target="1.6" />
       <module name="Peter_Zora" target="1.8" />
