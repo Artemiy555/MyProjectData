@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean class="spring.lesson15.part1.entity.Human" id="Ivan">
+        <constructor-arg name="name" value="Ivan"/>
+        <constructor-arg name="age" value="25"/>
+        <constructor-arg name="hp" value="100"/>
+        <property name="wearpon" ref="Axe"/>
+
+    </bean>
+
+    <bean class="spring.lesson15.part1.entity.Human" id="Vasya">
+    <constructor-arg name="name" value="Vasya"/>
+    <constructor-arg name="age" value="10"/>
+    <constructor-arg name="hp" value="20"/>
+        <property name="wearpon" ref="LegendaryOfficeKnife"/>
+
+    </bean>
+
+
+    <bean class="spring.lesson15.part1.entity.Wearpon" id="Axe">
+        <property name="type" value="Axe"/>
+        <property name="damage" value="5"/>
+        <property name="waight" value="10"/>
+    </bean>
+
+    <bean class="spring.lesson15.part1.entity.Wearpon" id="LegendaryOfficeKnife">
+        <property name="type" value="Knife"/>
+        <property name="damage" value="50"/>
+        <property name="waight" value="1"/>
+    </bean>
+
+
+</beans>

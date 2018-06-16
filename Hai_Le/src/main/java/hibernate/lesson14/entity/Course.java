@@ -1,5 +1,8 @@
 package hibernate.lesson14.entity;
 
+
+import javafx.scene.Group;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,43 +11,39 @@ import java.util.List;
 @Entity
 @Table(name = "COURSES")
 public class Course implements Serializable {
-
     @Id
-    @Column(name = "COURSE_ID")
+    @Column(name = "COURSES_ID")
     @SequenceGenerator(
             name = "courseId",
             sequenceName = "SEQ_COURSE_ID",
-            initialValue = 100_000,
+            initialValue = 10000,
             allocationSize = 50
     )
+
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
             generator = "courseId"
     )
     private Long id;
-
     @Column
     private String title;
-
     @Column
     private String description;
-
-    //Желательно инициализировать
-    @OneToMany (
-            //Выборка, каскад
+    @OneToMany(
             fetch = FetchType.EAGER,
             mappedBy = "courseId",
             cascade = CascadeType.REMOVE,
             targetEntity = Group.class
     )
-    private List<Group> groups = new ArrayList<>();
+    private List<Croup>groups = new ArrayList<>();
 
-    public Course() {}
-
-    public Course(String title, String description) {
+    public Course(String title, String description, List<Croup> groups) {
         this.title = title;
         this.description = description;
+        this.groups = groups;
     }
+
+    public Course(String title, String description) { }
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -52,8 +51,9 @@ public class Course implements Serializable {
     public void setTitle(String title) { this.title = title; }
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
-    public List<Group> getGroups() { return groups; }
-    public void setGroups(List<Group> groups) { this.groups = groups; }
+    public List<Croup> getGroups() { return groups; }
+    public void setGroups(List<Croup> groups) { this.groups = groups; }
+
 
     @Override
     public String toString() {
