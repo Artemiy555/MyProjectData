@@ -21,7 +21,7 @@ public class QueriesController {
             value = "/person/create",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
             method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.CREATED) //http_code 201 - Успешное создание записи на бекэнде
     public void createPerson(
             @RequestParam("name") String name,
             @RequestParam("surname") String surname,

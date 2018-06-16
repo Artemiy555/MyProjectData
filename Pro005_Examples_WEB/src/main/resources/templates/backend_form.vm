@@ -10,7 +10,7 @@
         <p>Name:</p><input    type="text"     id="name"    name="name"><br/>
         <p>Surname:</p><input type="text"     id="surname" name="surname"><br/>
         <p>Age:</p><input     type="number"   id="age"     name="age"><br/>
-        <input type="button" value="Sign In" onclick="personCreate()">
+        <input type="button" value="Sign In" onclick="personCreate(event)">
 
         <div id="workspace">
 
