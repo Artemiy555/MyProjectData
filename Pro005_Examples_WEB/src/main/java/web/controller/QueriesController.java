@@ -1,15 +1,16 @@
 package web.controller;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 import web.dao.PersonRepository;
 import web.domain.Person;
+
+import java.util.List;
 
 @Controller
 public class QueriesController {
@@ -27,5 +28,26 @@ public class QueriesController {
             @RequestParam("surname") String surname,
             @RequestParam("age") Integer age) {
         personRepository.saveAndFlush(new Person(name, surname, age));
+    }
+
+    @RequestMapping(
+            value = "/person/findall",
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            method = RequestMethod.GET)
+    public @ResponseBody String findAllPersons() {
+//        List<Person> persons = personRepository.findAll();
+//        /* JSON - формат передачи данных в виде
+//        *         строковой информации */
+        JSONArray body = new JSONArray();
+        body.addAll(personRepository.findAll());
+//        for (Person p : persons) {
+//            JSONObject item = new JSONObject();
+//            item.put("id", p.getId());
+//            item.put("name", p.getName());
+//            item.put("surname", p.getSurname());
+//            item.put("age", p.getAge());
+//            body.add(item);
+//        }
+        return body.toJSONString();
     }
 }

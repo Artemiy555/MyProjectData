@@ -12,6 +12,9 @@
         <p>Age:</p><input     type="number"   id="age"     name="age"><br/>
         <input type="button" value="Sign In" onclick="personCreate(event)">
 
+        <hr/>
+
+        <input value="persons" type="button" onclick="createPersonsTable()"/>
         <div id="workspace">
 
         </div>
