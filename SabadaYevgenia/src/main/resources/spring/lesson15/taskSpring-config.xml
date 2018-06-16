@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean class="spring.lesson15.taskLesson15.part1.entity.Company" id="Faberlic">
+    <constructor-arg name="title" value="Faberlic"/>
+    <constructor-arg name="employees" ref="Employee"/>
+</bean>
+
+    <bean class="spring.lesson15.taskLesson15.part1.entity.Employee" id="Employee">
+        <property name="director" ref="Director"/>
+        <property name="driver" ref="Driver"/>
+        <property name="manager" ref="Manager"/>
+
+    </bean>
+
+
+    <bean class="spring.lesson15.taskLesson15.part1.entity.Director" id="Director">
+        <constructor-arg name="name" value="Vova"/>
+        <constructor-arg name="surname" value="Sokolov"/>
+        <constructor-arg name="salary" value="10000"/>
+        <property name="driver" ref="Driver"/>
+    </bean>
+
+    <bean class="spring.lesson15.taskLesson15.part1.entity.Manager" id="Manager">
+        <constructor-arg name="name" value="Kolya"/>
+        <constructor-arg name="surname" value="Shuruta"/>
+        <constructor-arg name="salary" value="5000"/>
+    </bean>
+
+    <bean class="spring.lesson15.taskLesson15.part1.entity.Driver" id="Driver">
+        <constructor-arg name="name" value="Lyosha"/>
+        <constructor-arg name="surname" value="Davydenko"/>
+        <constructor-arg name="salary" value="1000"/>
+        <constructor-arg name="car" value="Porsh"/>
+    </bean>
+
+</beans>

@@ -13,6 +13,7 @@ import org.springframework.web.servlet.view.velocity.VelocityViewResolver;
 import javax.annotation.PostConstruct;
 import javax.servlet.Servlet;
 
+
 @Configuration
 public class VelocityConfig {
 
@@ -38,5 +39,6 @@ public class VelocityConfig {
         resolver.setSuffix(".vm");
         return resolver;
     }
+
 
 }
