@@ -37,4 +37,3 @@ public class VelocityConfig {
         return resolver;
     }
 }
-
