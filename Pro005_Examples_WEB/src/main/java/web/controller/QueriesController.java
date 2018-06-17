@@ -35,8 +35,8 @@ public class QueriesController {
             value = "/person/findall",
             method = RequestMethod.GET)
     public @ResponseBody String findAllPersons() {
-        List<Person> persons = personRepository.findAll();
-        JSONArray body = new JSONArray(personRepository.findAll());
+        JSONArray body =
+                new JSONArray(personRepository.findAll());
         return body.toString();
     }
 }
