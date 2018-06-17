@@ -1,7 +1,6 @@
 package web.controller;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -32,22 +31,13 @@ public class QueriesController {
 
     @RequestMapping(
             value = "/person/findall",
-            produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
             method = RequestMethod.GET)
     public @ResponseBody String findAllPersons() {
-//        List<Person> persons = personRepository.findAll();
-//        /* JSON - формат передачи данных в виде
-//        *         строковой информации */
-        JSONArray body = new JSONArray();
-        body.addAll(personRepository.findAll());
-//        for (Person p : persons) {
-//            JSONObject item = new JSONObject();
-//            item.put("id", p.getId());
-//            item.put("name", p.getName());
-//            item.put("surname", p.getSurname());
-//            item.put("age", p.getAge());
-//            body.add(item);
-//        }
-        return body.toJSONString();
+        List<Person> persons = personRepository.findAll();
+        System.out.println(persons);
+
+        JSONArray body = new JSONArray(persons);
+
+        return body.toString();
     }
 }

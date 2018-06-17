@@ -52,21 +52,24 @@ function createPersonsTable() {
     findAllPersons();
 }
 
-function processDataPersons(result) {
-    var person = jQuery.parseJSON(result);
+function processDataPersons(response) {
+    var person = JSON.parse(response);
 
-    jQuery('#tblPersons')
-        .append('<tbody id="body"></tbody>');
-    jQuery('#body')
-        .empty();
+    console.log(person);
 
+    var tblPersons = document.getElementById('tblPersons');
+    var tbody = document.createElement('tbody');
+    tbody.id = "table-body";
     for (var i = 0; i < person.length; i++) {
-        jQuery('#body').append('<tr id="body_row_' + i + '"></tr>');
-        jQuery('#body_row_' + i)
-            .append('<td id="person_id">'      + person[i].id      + '</td>')
-            .append('<td id="person_name">'    + person[i].name    + '</td>')
-            .append('<td id="person_surname">' + person[i].surname + '</td>')
-            .append('<td id="person_age">'     + person[i].age     + '</td>');
+        var tr = document.createElement('tr');
+        tr.id = "body_row_" + i;
+        tr.innerHTML =
+                '<td id="person_name">'    + person[i].name    + '</td>' +
+                '<td id="person_name">'    + person[i].name    + '</td>' +
+                '<td id="person_surname">' + person[i].surname + '</td>' +
+                '<td id="person_age">'     + person[i].age     + '</td>'
+        tbody.appendChild(tr);
     }
+    tblPersons.appendChild(tbody);
 }
 
