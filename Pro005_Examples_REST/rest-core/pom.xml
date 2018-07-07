@@ -107,7 +107,7 @@
                     <outputDirectory>
                         ../assembly/${project.artifactId}-${project.version}
                     </outputDirectory>
-                    <!--<mainClass></mainClass>-->
+                    <mainClass>com.rest.core.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>
