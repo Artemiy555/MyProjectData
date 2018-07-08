@@ -5,12 +5,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>Pro005</groupId>
-        <artifactId>Pro005</artifactId>
-        <version>1.0.0</version>
-    </parent>
-
     <groupId>Pro005_Examples_REST</groupId>
     <artifactId>Pro005_Examples_REST</artifactId>
     <version>1.0.0</version>
