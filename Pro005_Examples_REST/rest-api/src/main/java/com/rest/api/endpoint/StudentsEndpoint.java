@@ -1,5 +1,6 @@
 package com.rest.api.endpoint;
 
+import com.rest.api.dto.StudentDTO;
 import com.rest.api.request.GeneralRequest;
 import com.rest.api.request.parameters.CreateStudentParameters;
 import com.rest.api.response.GeneralResponse;
@@ -10,6 +11,7 @@ import io.swagger.annotations.SwaggerDefinition;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @SwaggerDefinition(
         info = @Info(
@@ -37,4 +39,21 @@ public interface StudentsEndpoint {
         public GeneralResponse<Long> createStudent(
                 GeneralRequest<CreateStudentParameters> params);
 
+    @ApiOperation(value = "Student record delete")
+    @RequestMapping(
+            value = "/delete",
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            method = RequestMethod.DELETE
+    )
+    public GeneralResponse<Void> deleteStudent(
+            @RequestParam("studentId") Long studentId);
+
+    @ApiOperation(value = "Student record get by ID")
+    @RequestMapping(
+            value = "/get",
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            method = RequestMethod.GET
+    )
+    public GeneralResponse<StudentDTO> getStudent(
+            @RequestParam("studentId") Long studentId);
 }
