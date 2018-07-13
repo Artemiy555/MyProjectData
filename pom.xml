@@ -52,8 +52,6 @@
         <module>DanilBabenko</module>
         <module>Peter_Zora</module>
         <module>Pro005_Examples</module>
-        <module>SabadaYevgenia</module>
-
         <module>Pro005_Examples_WEB</module>
         <module>Danil_Babenko_WEB</module>
         <module>JeugenGuba_WEB</module>
@@ -66,7 +64,7 @@
         <module>Hai_Le_WEB</module>
         <module>AnnaKhizhnyak_WEB</module>
         <module>MaximSevriukov_WEB</module>
-
+        <module>Peter_Zora_Rest</module>
     </modules>
 
     <properties>
