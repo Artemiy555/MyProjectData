@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 @Configuration
-@EnableFeignClients(clients = { RestApiFeignClient.class })
 @ConditionalOnClass({ Feign.class })
 public class FeignMappingConfig {
 
