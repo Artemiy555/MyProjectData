@@ -12,4 +12,12 @@ public class StudentsUtil {
         return student;
     }
 
+    public static Student createStudent() {
+        Student student = new Student();
+        student.setName("Vasilij");
+        student.setSurname("Vasiliev");
+        student.setAge(30);
+        return student;
+    }
+
 }

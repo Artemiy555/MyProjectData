@@ -1,5 +1,6 @@
 package com.rest.test.service;
 
+import com.rest.api.dto.StudentDTO;
 import com.rest.api.request.parameters.CreateStudentParameters;
 import com.rest.core.dao.StudentRepository;
 import com.rest.core.domain.Student;
@@ -61,5 +62,27 @@ public class TestStutentsService {
         Assert.assertEquals(student.getName(), result.getName());
         Assert.assertEquals(student.getSurname(), result.getSurname());
         Assert.assertEquals(student.getAge(), result.getAge());
+    }
+
+    @Test
+    public void testGetStudent() {
+        Student student = repository.saveAndFlush(StudentsUtil.createStudent());
+
+        StudentDTO result = service.get(student.getId());
+
+        Assert.assertEquals(student.getId(), result.getId());
+        Assert.assertEquals(student.getName(), result.getName());
+        Assert.assertEquals(student.getSurname(), result.getSurname());
+        Assert.assertEquals(student.getAge(), result.getAge());
+    }
+
+    @Test
+    public void testDeleteStudent() {
+        Student student =
+                repository.saveAndFlush(StudentsUtil.createStudent());
+
+        service.delete(student.getId());
+
+        Assert.assertNull(repository.findOne(student.getId()));
     }
 }
