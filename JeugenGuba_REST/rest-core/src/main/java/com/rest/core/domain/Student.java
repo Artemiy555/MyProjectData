@@ -1,14 +1,13 @@
-package web.domain;
-
-import org.springframework.context.annotation.Configuration;
+package com.rest.core.domain;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "PERSONS")
-public class Person {
+@Table(name = "Students")
+public class Student {
 
     @Id
+    @Column(name = "student_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -21,8 +20,9 @@ public class Person {
     @Column
     private Integer age;
 
-    public Person() {}
-    public Person(String name, String surname, Integer age) {
+    public Student() {}
+
+    public Student(String name, String surname, Integer age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -62,7 +62,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +

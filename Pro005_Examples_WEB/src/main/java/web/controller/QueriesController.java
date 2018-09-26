@@ -1,8 +1,9 @@
 package web.controller;
 
-
+import org.hibernate.HibernateException;
 import org.json.JSONArray;
-import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -11,13 +12,21 @@ import org.springframework.web.bind.annotation.*;
 import web.dao.PersonRepository;
 import web.domain.Person;
 
-import java.util.List;
+import javax.annotation.PostConstruct;
 
 @Controller
 public class QueriesController {
 
+    private Logger log;
+
     @Autowired
     private PersonRepository personRepository;
+
+    @PostConstruct
+    private void initialize() {
+        log = LoggerFactory.getLogger(QueriesController.class);
+        log.info("Логгер успешно создан...");
+    }
 
     @RequestMapping(
             value = "/person/create",
@@ -28,15 +37,23 @@ public class QueriesController {
             @RequestParam("name") String name,
             @RequestParam("surname") String surname,
             @RequestParam("age") Integer age) {
-        personRepository.saveAndFlush(new Person(name, surname, age));
+        try {
+            log.info("Подготовка к созданию записи");
+            log.info("Person - name : " + name + " surname :" + surname + " age : " + age);
+            Person person = personRepository.saveAndFlush(new Person(name, surname, age));
+            log.info("Запись успешно создана: " + person);
+        } catch (HibernateException exc) {
+            log.error(exc.getLocalizedMessage());
+            exc.printStackTrace();
+        }
     }
 
     @RequestMapping(
             value = "/person/findall",
             method = RequestMethod.GET)
     public @ResponseBody String findAllPersons() {
-        List<Person> persons = personRepository.findAll();
-        JSONArray body = new JSONArray(personRepository.findAll());
+        JSONArray body =
+                new JSONArray(personRepository.findAll());
         return body.toString();
     }
 }
