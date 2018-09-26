@@ -1,8 +1,9 @@
+/*
 package hibernate.lesson14.dao.impl;
 
 
 import hibernate.lesson13.util.HibernateUtil;
-import hibernate.lesson14.dao.CourseDoa;
+
 import hibernate.lesson14.entity.Course;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -63,3 +64,4 @@ public class CourseDaoImpl implements CourseDoa {
         return null;
     }
 }
+*/

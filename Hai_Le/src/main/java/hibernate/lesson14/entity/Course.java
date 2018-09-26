@@ -1,3 +1,4 @@
+/*
 package hibernate.lesson14.entity;
 
 
@@ -65,3 +66,4 @@ public class Course implements Serializable {
                 '}';
     }
 }
+*/

@@ -36,4 +36,5 @@ public class VelocityConfig {
         resolver.setSuffix(".vm");
         return resolver;
     }
+
 }

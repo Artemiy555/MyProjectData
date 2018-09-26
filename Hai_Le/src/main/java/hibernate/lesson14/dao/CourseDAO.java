@@ -1,3 +1,4 @@
+/*
 package hibernate.lesson14.dao;
 
 import hibernate.lesson14.entity.Course;
@@ -18,3 +19,4 @@ public interface CourseDAO {
     List<Course> findAll();
 
 }
+*/

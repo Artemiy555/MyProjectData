@@ -1,4 +1,4 @@
-package hibernate.lesson14.entity;
+/*package hibernate.lesson14.entity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -70,3 +70,4 @@ public class Group {
                 '}';
     }
 }
+*/

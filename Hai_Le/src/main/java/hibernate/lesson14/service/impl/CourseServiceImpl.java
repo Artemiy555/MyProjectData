@@ -1,3 +1,4 @@
+/*
 package hibernate.lesson14.service.impl;
 
 import hibernate.lesson14.dao.CourseDAO;
@@ -30,3 +31,4 @@ public class CourseServiceImpl implements CourseService {
 
 
 }
+*/
