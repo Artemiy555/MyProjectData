@@ -22,7 +22,7 @@ public class CreateSchema {
             Statement statement = c.createStatement();
             /*SCHEMA - представляет из себя отдельную базу
              * данных на MySQL Server*/
-            statement.executeUpdate("CREATE SCHEMA bro");
+            statement.executeUpdate("CREATE SCHEMA vh");
             statement.close();
         } catch (SQLException e) {
             e.printStackTrace();

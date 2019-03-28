@@ -13,6 +13,7 @@
         <module name="Anna_Khizhnyak" />
         <module name="AnnaKhizhnyak_WEB" />
         <module name="Baranets_Artemiy_WEB" />
+        <module name="BaranetsArtemiy" />
         <module name="Danil_Babenko_WEB" />
         <module name="DanilBabenko" />
         <module name="Hai_Le_WEB" />
@@ -26,7 +27,10 @@
         <module name="Peter_Zora" />
         <module name="Peter_Zora_Web" />
         <module name="Pro005_Examples" />
+        <module name="Pro005_Examples_REST_Client" />
         <module name="Pro005_Examples_WEB" />
+        <module name="rest-api" />
+        <module name="rest-core" />
         <module name="Sabada_Yevgenya_WEB" />
         <module name="SvetlanaKunderevich" />
         <module name="TelechukPeter" />
@@ -58,7 +62,11 @@
       <module name="Peter_Zora_Web" target="1.6" />
       <module name="Pro005" target="1.8" />
       <module name="Pro005_Examples" target="1.8" />
+      <module name="Pro005_Examples_REST" target="1.5" />
+      <module name="Pro005_Examples_REST_Client" target="1.8" />
       <module name="Pro005_Examples_WEB" target="1.6" />
+      <module name="rest-api" target="1.5" />
+      <module name="rest-core" target="1.5" />
       <module name="Sabada_Yevgenya_WEB" target="1.6" />
       <module name="SabadaYevgenia" target="1.8" />
       <module name="SvetlanaKunderevich" target="1.8" />

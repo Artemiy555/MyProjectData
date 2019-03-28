@@ -5,7 +5,7 @@ public class Person {
     private Integer id;
     private String name;
     private String surename;
-    private Integer are;
+    private Integer number;
 
     public Person() {
     }
@@ -16,11 +16,11 @@ public class Person {
     }
 
 
-    public Person(Integer id, String name, String surename, Integer are) {
+    public Person(Integer id, String name, String surename, Integer number) {
         this.id = id;
         this.name = name;
         this.surename = surename;
-        this.are = are;
+        this.number = number;
     }
 
    @Override
@@ -29,7 +29,7 @@ public class Person {
            sb.append("id='").append(id).append('\'');
            sb.append(", name='").append(name).append('\'');
            sb.append(", surname='").append(surename).append('\'');
-           sb.append(", age='").append(are).append('\'');
+           sb.append(", age='").append(number).append('\'');
            sb.append("}");
            return sb.toString();
        }
@@ -58,11 +58,11 @@ public class Person {
         this.surename = surename;
     }
 
-    public Integer getAre() {
-        return are;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setAre(Integer are) {
-        this.are = are;
+    public void setNumber(Integer are) {
+        this.number = are;
     }
 }

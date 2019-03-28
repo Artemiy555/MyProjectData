@@ -22,11 +22,10 @@ public class CreateTable {
             /*CREATE TABLE <Название таблицы>
              *   (<Имя столбца> <Тип данных> <Доп. параметра>*/
             statement.executeUpdate(
-                    "CREATE TABLE REGISTRATION" +
+                    "CREATE TABLE HOSPITAL" +
                             "(ID INTEGER NOT NULL," +
                             "NAME VARCHAR(30)," +
-                            "SURNAME VARCHAR(30)," +
-                            "AGE INTEGER," +
+                                "NUMBEROFSEATS INTEGER," +
                             "PRIMARY KEY (ID))");
             statement.close();
         } catch (SQLException e) {

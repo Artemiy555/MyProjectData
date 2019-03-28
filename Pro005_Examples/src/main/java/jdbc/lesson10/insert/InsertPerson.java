@@ -15,7 +15,6 @@ public class InsertPerson {
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.ENGLISH);
-
         /*PreparedStatement класс который позволяет созтать
         * параметоризированный запрос для работы с БД*/
         try (Connection c =

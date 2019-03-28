@@ -27,26 +27,16 @@ public class InserPerson {
                                     "VALUES (?, ?, ?, ?)"
                     );
 
-            Person person1 = new Person(100, "Ivan", "Ivanov", 25);
+            Person person1 = new Person(25, "Abc", "123", 15);
             statement.setInt(1, person1.getId());
             statement.setString(2, person1.getName());
             statement.setString(3, person1.getSurename());
-            statement.setInt(4, person1.getAre());
+            statement.setInt(4, person1.getNumber());
             statement.execute();
 
             System.out.println("Создана запись: " + person1);
 
             statement.clearParameters();
-
-            Person person2 = new Person(200, "Viktor", "Fedorov", 38);
-            statement.setInt(1, person2.getId());
-            statement.setString(2, person2.getName());
-            statement.setString(3, person2.getSurename());
-            statement.setInt(4, person2.getAre());
-            statement.execute();
-
-            System.out.println("Создана запись: " + person2);
-
             statement.close();
         } catch (SQLException e) {
             e.printStackTrace();

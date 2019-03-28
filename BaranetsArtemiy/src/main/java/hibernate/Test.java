@@ -1,6 +1,6 @@
 package hibernate;
 
-import hibernate.Util.HibernateUtil;
+//import hibernate.Util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.*;
 
@@ -21,17 +21,17 @@ public class Test {
                 "1",
                 1000.00
         );
-        Session session =
-                HibernateUtil.getFactory().openSession();
+       // Session session =
+            //    HibernateUtil.getFactory().openSession();
         try {
-            session.beginTransaction();
-            session.save(employee1);
-            session.save(employee2);
-            session.getTransaction().commit();
+          //  session.beginTransaction();
+          //  session.save(employee1);
+           // session.save(employee2);
+           // session.getTransaction().commit();
         } catch (HibernateException exc) {
-            session.getTransaction().rollback();
+           // session.getTransaction().rollback();
         }
 
-        HibernateUtil.getFactory().close();
+       // HibernateUtil.getFactory().close();
     }
 }

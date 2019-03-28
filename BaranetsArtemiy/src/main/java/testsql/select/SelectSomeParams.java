@@ -8,7 +8,7 @@ import java.util.Locale;
 public class SelectSomeParams {
 
     private static String url  =
-            "jdbc:mysql://localhost:3306/Jdbc?useSSL=false";
+            "jdbc:mysql://localhost:3306/test?useSSL=false";
     private static String user = "root";
     private static String pass = "root";
 
