@@ -7,7 +7,7 @@ import java.util.List;
 
     @Entity
     @Table(name = "COURSES")
-    public class Course implements Serializable {
+    public class Course {
 
         @Id
         @Column(name = "COURSE_ID")
@@ -40,9 +40,22 @@ import java.util.List;
         public Course() {
         }
 
+        public Course(Long id,String title, String description) {
+            this.id = id;
+            this.title = title;
+            this.description = description;
+        }
+
         public Course(String title, String description) {
             this.title = title;
             this.description = description;
+        }
+
+//
+        @Override
+        public String toString() {
+            return
+                    id.toString();
         }
 
         public Long getId() {
@@ -77,15 +90,7 @@ import java.util.List;
             this.groups = groups;
         }
 
-        @Override
-        public String toString() {
-            return "Course{" +
-                    "id=" + id +
-                    ", title='" + title + '\'' +
-                    ", description='" + description + '\'' +
-                    ", groups=" + groups +
-                    '}';
-        }
+
 
     }
 

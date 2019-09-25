@@ -1,7 +1,9 @@
 package group.entily;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -41,6 +43,31 @@ public class Group {
     @Temporal(TemporalType.DATE)
     private Date end;
 
+
+    @OneToMany(
+            fetch = FetchType.EAGER,
+            mappedBy = "groupId",
+            cascade = CascadeType.REMOVE,
+            targetEntity = Student.class
+    )
+    private List<Student> students = new ArrayList<>();
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+
+    @Override
+    public String toString() {
+        return
+                 courseId.getId().toString();
+
+    }
+
     public Group() {}
     public Group(Course courseId, String title, Date begin, Date end) {
         this.courseId = courseId;
@@ -48,6 +75,15 @@ public class Group {
         this.begin = begin;
         this.end = end;
     }
+
+    public Group(Long id, Date begin, Date end, String title) {
+        this.id = id;
+        this.title = title;
+        this.begin = begin;
+        this.end = end;
+    }
+
+
 
     public Long getId() {
         return id;
@@ -80,14 +116,5 @@ public class Group {
         this.end = end;
     }
 
-    @Override
-    public String toString() {
-        return "Group{" +
-                "id=" + id +
-                ", courseId=" + courseId +
-                ", title='" + title + '\'' +
-                ", begin=" + begin +
-                ", end=" + end +
-                '}';
-    }
+
 }

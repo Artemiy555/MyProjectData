@@ -22,4 +22,21 @@ public class CourseServiceImpl implements CourseService {
         }
         return null;
     }
+
+    @Override
+    public boolean update(Course course) {
+        if (course != null) {
+            return courseDAO.update(course);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean delete(Course course) {
+        if (course != null) {
+            return courseDAO.delete(course);
+        }
+        return false;
+    }
+
 }

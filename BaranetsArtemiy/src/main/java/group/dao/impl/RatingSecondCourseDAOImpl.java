@@ -1,8 +1,7 @@
 package group.dao.impl;
 
-import group.dao.CourseDao;
-import group.entily.Course;
-import group.entily.Group;
+import group.dao.RatingSecondCourseDao;
+import group.entily.RatingSecondCourse;
 import group.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -16,20 +15,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class CourseDAOImpl implements CourseDao {
-
+public class RatingSecondCourseDAOImpl implements RatingSecondCourseDao {
     private SessionFactory factory;
 
-    public CourseDAOImpl() {
+
+    public RatingSecondCourseDAOImpl() {
         factory = HibernateUtil.getFactory();
     }
 
     @Override
-    public Long create(Course course) {
+    public Long create(RatingSecondCourse ratingSecondCourse) {
         Session session = factory.openSession();
         try {
             session.beginTransaction();
-            Long id = (Long) session.save(course);
+            Long id = (Long) session.save(ratingSecondCourse);
             session.getTransaction().commit();
             return id;
         } catch (HibernateException exc) {
@@ -40,26 +39,16 @@ public class CourseDAOImpl implements CourseDao {
     }
 
     @Override
-    public Course read(Long id) {
+    public RatingSecondCourse read(Long id) {
         Session session = factory.openSession();
-        Course course = session.get(Course.class, id);
+        RatingSecondCourse ratingSecondCourse = session.get(RatingSecondCourse.class, id);
         session.close();
-        return course;
+        return ratingSecondCourse;
     }
 
     @Override
-    public boolean update(Course course) {
-        Session session = factory.openSession();
-        try {
-            session.beginTransaction();
-            session.update(course);
-            session.getTransaction().commit();
-            return true;
-        } catch (HibernateException exc) {
-            return false;
-        } finally {
-            session.close();
-        }
+    public boolean update(RatingSecondCourse ratingSecondCourse) {
+        return false;
     }
 
     @Override
@@ -67,26 +56,12 @@ public class CourseDAOImpl implements CourseDao {
         return false;
     }
 
-    @Override
-    public boolean delete(Course course) {
-        Session session = factory.openSession();
-        try {
-            session.beginTransaction();
-            session.delete(course);
-            session.getTransaction().commit();
-            return true;
-        } catch (HibernateException exc) {
-            return false;
-        } finally {
-            session.close();
-        }
-    }
     private static String url  =
             "jdbc:mysql://localhost:3306/hibernate?useSSL=false";//Подключение БД
     private static String user = "root";
     private static String pass = "root";
     @Override
-    public List<Course> findAll() {
+    public List<RatingSecondCourse> findAll() {
         Locale.setDefault(Locale.ENGLISH);
         try (Connection c =
                      DriverManager.getConnection(url, user, pass)) {
@@ -94,16 +69,15 @@ public class CourseDAOImpl implements CourseDao {
             /* ResultSet - множество записей которые мы получим
             из БД, (не обработанные)*/
             ResultSet set = statement.executeQuery(
-                    "SELECT * FROM courses"
+                    "SELECT * FROM second_first_course"
             );
 
-            List<Course> doctors = new ArrayList<>();
+            List<RatingSecondCourse> doctors = new ArrayList<>();
             while (set.next()) {
-                doctors.add(new Course(
-                        set.getLong(1),
+                doctors.add(new RatingSecondCourse(
                         set.getString(2),
-                        set.getString(3)
-
+                        set.getString(3),
+                        set.getInt(1)
 
                 ));
             }
@@ -113,9 +87,8 @@ public class CourseDAOImpl implements CourseDao {
             e.printStackTrace();
         }
         return null;
-//        List<Course> list = factory.openSession().createCriteria(Course.class).list();
 //
-//        return list;
     }
-}
 
+
+}

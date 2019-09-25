@@ -14,4 +14,7 @@ public interface CourseDao {
     boolean delete(Long id);
 
     List<Course> findAll();
+
+    boolean delete(Course course);
+
 }

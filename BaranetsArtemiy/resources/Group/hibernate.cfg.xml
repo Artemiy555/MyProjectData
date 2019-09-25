@@ -16,6 +16,9 @@
 
         <mapping class="group.entily.Course"/>
         <mapping class="group.entily.Group"/>
+        <mapping class="group.entily.Student"/>
+        <mapping class="group.entily.RatingFirstCourse"/>
+        <mapping class="group.entily.RatingSecondCourse"/>
 
     </session-factory>
 </hibernate-configuration>

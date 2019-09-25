@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.ControllerFX.Controller">
+    <children>
+      <TabPane layoutX="2.0" layoutY="5.0" prefHeight="746.0" prefWidth="1028.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Course">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="647.0">
+                     <children>
+                          <TableView fx:id="tableView" layoutY="-1.0" prefHeight="570.0" prefWidth="1028.0">
+                              <columns>
+                                  <TableColumn fx:id="coure_id" prefWidth="145.59994196891785" text="COURSE_ID" />
+                                  <TableColumn fx:id="decsription" prefWidth="357.6000213623047" text="DESCRIPTION" />
+                                  <TableColumn fx:id="titleCourse" prefWidth="434.39996337890625" text="TITLE" />
+                              </columns>
+                          </TableView>
+                          <Button layoutX="22.0" layoutY="585.0" mnemonicParsing="false" onAction="#NewLineCourse" prefHeight="31.0" prefWidth="158.0" text="New line" />
+                          <Button layoutX="22.0" layoutY="616.0" mnemonicParsing="false" onAction="#DeleteCourse" prefHeight="31.0" prefWidth="158.0" text="Delete" />
+                          <Button layoutX="180.0" layoutY="585.0" mnemonicParsing="false" onAction="#UpdateCourse" prefHeight="31.0" prefWidth="158.0" text="Update" />
+                        <Button layoutX="180.0" layoutY="616.0" mnemonicParsing="false" onAction="#EditCourse" prefHeight="31.0" prefWidth="158.0" text="Edit" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Group">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="courseTable" layoutX="-1.0" prefHeight="609.0" prefWidth="1022.0">
+                          <columns>
+                            <TableColumn fx:id="groupId" prefWidth="87.99999618530273" text="GROUP_ID" />
+                            <TableColumn fx:id="begin" prefWidth="176.8000030517578" text="BEGIN" />
+                              <TableColumn fx:id="end" prefWidth="202.39999389648438" text="END" />
+                              <TableColumn fx:id="coureIdGrop" prefWidth="247.20001220703125" text="COURSE_ID" />
+                              <TableColumn fx:id="titleGroup" minWidth="0.0" prefWidth="284.79998779296875" text="TITLE" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="23.0" layoutY="617.0" mnemonicParsing="false" onAction="#NewLineGroup" prefHeight="31.0" prefWidth="158.0" text="New line" />
+                        <Button layoutX="181.0" layoutY="617.0" mnemonicParsing="false" onAction="#UpdateGroup" prefHeight="31.0" prefWidth="158.0" text="Update" />
+                        <Button layoutX="23.0" layoutY="648.0" mnemonicParsing="false" onAction="#DeleteGroup" prefHeight="31.0" prefWidth="158.0" text="Delete" />
+                        <Button layoutX="181.0" layoutY="648.0" mnemonicParsing="false" onAction="#EditGroup" prefHeight="31.0" prefWidth="158.0" text="Edit" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Student">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="647.0">
+                     <children>
+                        <TableView fx:id="tableViewStudent" layoutY="-1.0" prefHeight="570.0" prefWidth="1022.0">
+                           <columns>
+                              <TableColumn fx:id="fullName" prefWidth="323.9999816417694" text="FULLNAME" />
+                              <TableColumn fx:id="student_id" prefWidth="406.4000244140625" text="STUDENT_ID" />
+                              <TableColumn fx:id="group_id" prefWidth="283.99993896484375" text="GROUP_ID" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="22.0" layoutY="585.0" mnemonicParsing="false" onAction="#NewLineStudent" prefHeight="31.0" prefWidth="158.0" text="New line" />
+                        <Button layoutX="22.0" layoutY="616.0" mnemonicParsing="false" onAction="#DeleteStudent" prefHeight="31.0" prefWidth="158.0" text="Delete" />
+                        <Button layoutX="180.0" layoutY="585.0" mnemonicParsing="false" onAction="#UpdateStudent" prefHeight="31.0" prefWidth="158.0" text="Update" />
+                        <Button layoutX="180.0" layoutY="616.0" mnemonicParsing="false" onAction="#EditStudent" prefHeight="31.0" prefWidth="158.0" text="Edit" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="RATING_FIRST_COURSE">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="647.0">
+                     <children>
+                        <TableView fx:id="tableViewFirst" layoutX="3.0" prefHeight="570.0" prefWidth="1022.0">
+                           <columns>
+                              <TableColumn fx:id="progFirst" prefWidth="311.20001220703125" text="PROG" />
+                              <TableColumn fx:id="mathFirst" prefWidth="370.4000062942505" text="MATH" />
+                              <TableColumn fx:id="idFirst" prefWidth="225.60003662109375" text="ID" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="22.0" layoutY="585.0" mnemonicParsing="false" onAction="#NewLineFirst" prefHeight="31.0" prefWidth="158.0" text="New line" />
+                        <Button layoutX="22.0" layoutY="616.0" mnemonicParsing="false" onAction="#DeleteFirst" prefHeight="31.0" prefWidth="158.0" text="Delete" />
+                        <Button layoutX="180.0" layoutY="585.0" mnemonicParsing="false" onAction="#UpdateFirst" prefHeight="31.0" prefWidth="158.0" text="Update" />
+                        <Button layoutX="180.0" layoutY="616.0" mnemonicParsing="false" onAction="#EditFirst" prefHeight="31.0" prefWidth="158.0" text="Edit" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="RATING_FIRST_SECOND">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="647.0">
+                     <children>
+                        <TableView fx:id="tableViewSecond" layoutX="3.0" prefHeight="570.0" prefWidth="1022.0">
+                           <columns>
+                              <TableColumn fx:id="progSecond" prefWidth="306.39990234375" text="PROG" />
+                              <TableColumn fx:id="mathSecond" prefWidth="335.2000551223755" text="MATH" />
+                              <TableColumn fx:id="idSecond" prefWidth="353.60009765625" text="ID" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="22.0" layoutY="585.0" mnemonicParsing="false" onAction="#NewLineSecond" prefHeight="31.0" prefWidth="158.0" text="New line" />
+                        <Button layoutX="22.0" layoutY="616.0" mnemonicParsing="false" onAction="#DeleteSecond" prefHeight="31.0" prefWidth="158.0" text="Delete" />
+                        <Button layoutX="180.0" layoutY="585.0" mnemonicParsing="false" onAction="#UpdateSecond" prefHeight="31.0" prefWidth="158.0" text="Update" />
+                        <Button layoutX="180.0" layoutY="616.0" mnemonicParsing="false" onAction="#EditSecond" prefHeight="31.0" prefWidth="158.0" text="Edit" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

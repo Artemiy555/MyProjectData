@@ -6,36 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AlexandrKorniychuk" />
-        <module name="AlexandrKorniychuk_WEB" />
-        <module name="AlexChavarria" />
-        <module name="AlexChWeb" />
-        <module name="Anna_Khizhnyak" />
-        <module name="AnnaKhizhnyak_WEB" />
         <module name="Baranets_Artemiy_WEB" />
-        <module name="BaranetsArtemiy" />
-        <module name="Danil_Babenko_WEB" />
-        <module name="DanilBabenko" />
-        <module name="Hai_Le_WEB" />
-        <module name="JeugenGuba" />
-        <module name="JeugenGuba_WEB" />
         <module name="JeugenGuba_WEB (1)" />
-        <module name="MaximSevriukov" />
-        <module name="MaximSevriukov_WEB" />
-        <module name="MickleMur" />
-        <module name="MMA_WEB" />
-        <module name="Peter_Zora" />
-        <module name="Peter_Zora_Web" />
-        <module name="Pro005_Examples" />
-        <module name="Pro005_Examples_REST_Client" />
-        <module name="Pro005_Examples_WEB" />
-        <module name="rest-api" />
-        <module name="rest-core" />
-        <module name="Sabada_Yevgenya_WEB" />
-        <module name="SvetlanaKunderevich" />
-        <module name="TelechukPeter" />
-        <module name="VladimirTereshchenko" />
-        <module name="VladimirTereshchenko_WEB" />
+        <module name="BaranetsArtemiy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

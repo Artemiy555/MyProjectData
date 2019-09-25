@@ -38,35 +38,9 @@
     <version>1.0.0</version>
 
     <modules>
-        <module>AlexandrKorniychuk</module>
-        <module>AlexChavarria</module>
-        <module>Anna_Khizhnyak</module>
-        <!--<module>Hai_Le</module>-->
-        <!--<module>Baranets_Artemiy_WEB</module>-->
+
+        <module>Baranets_Artemiy_WEB</module>
         <module>BaranetsArtemiy</module>
-        <module>JeugenGuba</module>
-        <module>MaximSevriukov</module>
-        <module>MickleMur</module>
-        <module>SvetlanaKunderevich</module>
-        <module>TelechukPeter</module>
-        <module>VladimirTereshchenko</module>
-        <module>DanilBabenko</module>
-        <module>Peter_Zora</module>
-        <!--<module>Pro005_Examples</module>-->
-        <module>Pro005_Examples_WEB</module>
-        <module>Pro005_Examples_REST</module>
-        <module>Pro005_Examples_REST_Client</module>
-        <module>Danil_Babenko_WEB</module>
-        <module>JeugenGuba_WEB</module>
-        <module>MMA_WEB</module>
-        <module>Sabada_Yevgenya_WEB</module>
-        <module>VladimirTereshchenko_WEB</module>
-        <module>Peter_Zora_Web</module>
-        <module>AlexChWeb</module>
-        <module>AlexandrKorniychuk_WEB</module>
-        <module>Hai_Le_WEB</module>
-        <module>AnnaKhizhnyak_WEB</module>
-        <module>MaximSevriukov_WEB</module>
 
     </modules>
 

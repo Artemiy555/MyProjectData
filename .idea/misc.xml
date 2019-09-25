@@ -3,13 +3,37 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Pro005_Examples/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/AlexChWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/AlexChavarria/pom.xml" />
+        <option value="$PROJECT_DIR$/AlexandrKorniychuk/pom.xml" />
+        <option value="$PROJECT_DIR$/AlexandrKorniychuk_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/AnnaKhizhnyak_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/Anna_Khizhnyak/pom.xml" />
+        <option value="$PROJECT_DIR$/DanilBabenko/pom.xml" />
+        <option value="$PROJECT_DIR$/Danil_Babenko_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/Hai_Le_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/JeugenGuba/pom.xml" />
+        <option value="$PROJECT_DIR$/JeugenGuba_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/MMA_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/MaximSevriukov/pom.xml" />
+        <option value="$PROJECT_DIR$/MaximSevriukov_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/MickleMur/pom.xml" />
+        <option value="$PROJECT_DIR$/Peter_Zora/pom.xml" />
+        <option value="$PROJECT_DIR$/Peter_Zora_Web/pom.xml" />
+        <option value="$PROJECT_DIR$/Pro005_Examples_REST/pom.xml" />
+        <option value="$PROJECT_DIR$/Pro005_Examples_REST_Client/pom.xml" />
+        <option value="$PROJECT_DIR$/Pro005_Examples_WEB/pom.xml" />
         <option value="$PROJECT_DIR$/SabadaYevgenia/pom.xml" />
+        <option value="$PROJECT_DIR$/Sabada_Yevgenya_WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/SvetlanaKunderevich/pom.xml" />
+        <option value="$PROJECT_DIR$/TelechukPeter/pom.xml" />
+        <option value="$PROJECT_DIR$/VladimirTereshchenko/pom.xml" />
+        <option value="$PROJECT_DIR$/VladimirTereshchenko_WEB/pom.xml" />
       </set>
     </option>
   </component>
